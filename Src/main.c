@@ -25,12 +25,12 @@
 /* USER CODE BEGIN Includes */
 #include "oled.h"
 #include "stdio.h"
+#include "app.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-char lcdLine_1st_line[16];
-char lcdLine_2st_line[16];
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -51,17 +51,7 @@ char lcdLine_2st_line[16];
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-void user_oled_init()
-{
-	OLED_PowerControl(ENABLE);
-	HAL_Delay(200);
-	OLED_Init();
-	sprintf(lcdLine_1st_line, "Makinc_liu");
-	sprintf(lcdLine_2st_line, "Hello World    ");
 
-	OLED_ShowString(0, 0, (unsigned char *)lcdLine_1st_line, 16);
-	OLED_ShowString(0, 2, (unsigned char *)lcdLine_2st_line, 16);
-}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -107,10 +97,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_SET);
-		HAL_Delay(500);
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_RESET);
-		HAL_Delay(500);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
