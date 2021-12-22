@@ -24,11 +24,13 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "oled.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+char lcdLine_1st_line[16];
+char lcdLine_2st_line[16];
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -49,7 +51,17 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+void user_oled_init()
+{
+	OLED_PowerControl(ENABLE);
+	HAL_Delay(200);
+	OLED_Init();
+	sprintf(lcdLine_1st_line, "Makinc_liu");
+	sprintf(lcdLine_2st_line, "Hello World    ");
 
+	OLED_ShowString(0, 0, (unsigned char *)lcdLine_1st_line, 16);
+	OLED_ShowString(0, 2, (unsigned char *)lcdLine_2st_line, 16);
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -86,6 +98,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+	user_oled_init();
 
   /* USER CODE END 2 */
 
