@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L071xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;   ../Drivers/STM32L0xx_HAL_Driver/Inc;   ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy;   ../Drivers/CMSIS/Device/ST/STM32L0xx/Include;   ../Drivers/CMSIS/Include;   ..\hardware\iic;   ..\hardware\oled;   ..\bsp</IncludePath>
+              <IncludePath>../Inc;    ../Drivers/STM32L0xx_HAL_Driver/Inc;    ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy;    ../Drivers/CMSIS/Device/ST/STM32L0xx/Include;    ../Drivers/CMSIS/Include;    ..\hardware\iic;    ..\hardware\oled;    ..\bsp</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

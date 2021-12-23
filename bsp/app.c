@@ -22,7 +22,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
   switch(GPIO_Pin)
   {
-    case GPIO_PIN_14: HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_15);
+    case GPIO_PIN_14: HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_1);
     default: break;
   }
 }
