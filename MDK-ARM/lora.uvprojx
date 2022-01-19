@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L071xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;          ../Drivers/STM32L0xx_HAL_Driver/Inc;          ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy;          ../Drivers/CMSIS/Device/ST/STM32L0xx/Include;          ../Drivers/CMSIS/Include;          ..\hardware\iic;          ..\hardware\oled;          ..\bsp;          ..\hardware\key</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32L0xx_HAL_Driver/Inc;../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L0xx/Include;../Drivers/CMSIS/Include;..\hardware\iic;..\hardware\oled;..\bsp;..\hardware\key;..\hardware\temperature</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1628,6 +1628,16 @@
               <FileName>font.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\hardware\oled\font.c</FilePath>
+            </File>
+            <File>
+              <FileName>temp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\hardware\temperature\temp.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\hardware\temperature\i2c_2.c</FilePath>
             </File>
           </Files>
         </Group>

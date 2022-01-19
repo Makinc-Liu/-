@@ -3,6 +3,7 @@
 #include "stdio.h"
 #include "usart.h"
 #include "key.h"
+#include "temp.h"
 
 char lcdLine_1st_line[16];
 char lcdLine_2st_line[16];
@@ -19,14 +20,14 @@ void user_oled_init()
 	OLED_Init();
 	OLED_Clear();
 	
-	key_init();
 }
 void user_loop(void)
 {
 	//EX_adc();
 
-	if (key_scan()) sprintf(lcdLine_2st_line, "b:%d",key_scan());
 	
+	
+	sprintf(lcdLine_2st_line, "b:%f",Get_Temperature());
 	sprintf(lcdLine_1st_line, "keyboard test ");
 	
 	
